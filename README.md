@@ -23,7 +23,7 @@ Some websites use known extension IDs and try to load resources from `chrome-ext
 
 ---
 
-## ⚙️ Installation**
+## ⚙️ Installation
 Works in Chrome and Brave (recommended).
 - on Github, click on the "<> Code" button and "Download ZIP", then unzip in a folder of your choice.
 - or do "npm install probextshield" in a folder of your choice.
@@ -73,6 +73,7 @@ The options UI provides:
 
 ## 🚧 Roadmap
 - Retrieve extension names
+- Use a proxy for data collection
 - Create a public dashboard showing the sites using this technique and which extensions they are probing
 
 ---
