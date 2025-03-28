@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "ProbExtShield",
+  "author": "Stéphane Hamel",
+  "version": "1.0.3",
+  "description": "Your watchdog against extension fingerprinting.",
+  "homepage_url": "https://github.com/shamel67/probextshield",
+  "minimum_chrome_version": "133",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_icon": "img/probextshield.png"
+  },
+  "icons": {
+    "16": "img/probextshield.png",
+    "48": "img/probextshield.png",
+    "128": "img/probextshield.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.google-analytics.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "probe.js"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
+}

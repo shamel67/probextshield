@@ -1,0 +1,7 @@
+# .npmignore
+*.zip
+assets/
+utest.htm
+ai.js
+unit.js
+*.log

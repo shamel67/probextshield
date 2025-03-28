@@ -1,0 +1,29 @@
+Copyright © 2025 Stéphane Hamel
+
+This software is licensed under a custom open source license:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to use, copy, modify, and distribute the Software, subject to the following conditions:
+
+1. **Attribution Required**  
+   You must retain the original copyright notice and give appropriate credit to the original author, including a link to the original repository if redistributed or modified.
+
+2. **Non-Commercial Use Only**  
+   The Software may not be used, in whole or in part, for commercial purposes without explicit, written permission from the author. Commercial use includes but is not limited to:
+   - Selling or licensing the software
+   - Incorporating it into proprietary or for-profit systems
+   - Distributing it in a paid app or service
+
+3. **Modification and Redistribution**  
+   You may fork, adapt, and redistribute the Software freely for non-commercial purposes, provided that attribution is given and license terms are preserved.
+
+4. **Contributions**  
+   By submitting a contribution (e.g., pull request), you confirm:
+   - The contribution is your own original work
+   - You grant the repository owner a non-exclusive, worldwide, royalty-free right to use, modify, and distribute your contribution under this license
+
+This license does **not** conform to the Open Source Initiative’s (OSI) definition of open source due to the non-commercial clause. However, it is offered in the spirit of open collaboration and learning.
+
+For commercial use, partnerships, or licensing inquiries, please contact:
+
+Stéphane Hamel
+shamel67@gmail.com

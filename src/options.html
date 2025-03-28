@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProbExtShield Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+
+    <p id="description">Alerts and alerts you when websites attempt to probe for installed browser extensions.</p>
+    <div id="authorRow">
+        <div>
+            a tool by <a href="https://www.linkedin.com/in/shamel/" target="_blank">Stéphane Hamel</a><br/>
+            Proudly Canadian <span id="canadaFlag">🇨🇦</span>
+        </div>
+        <a id="buyCoffee" href="https://ko-fi.com/shamel" target="_blank">
+            <img src="img/kofi6.png" alt="Buy Me a Coffee">
+        </a>
+    </div>
+
+    <div class="settingsContainer">
+      <div class="settings-group">
+        <h3>Privacy Settings</h3>
+        <div class="setting-item">
+          <input type="checkbox" id="blockExtProbing">
+          <label for="blockExtProbing">Prevent extension probing<br/>(instead of just warning).</label>
+        </div>
+        <div class="setting-item">
+          <input type="checkbox" id="optInTracking">
+          <label for="optInTracking">Send anonymous data about websites doing extension probing.</label>
+        </div>
+      </div>
+    </div>
+
+    <button id="clearCache">Clear cache</button>
+    <div id="cacheMessage">✅ Cache cleared!</div>
+
+    <script src="options.js" defer></script>
+</body>
+</html>

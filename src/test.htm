@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GA4 Measurement Protocol Test</title>
+</head>
+<body>
+  <h1>GA4 Test</h1>
+  <button id="send">Send GA Page View</button>
+
+  <script>
+    const GA_MEASUREMENT_ID = 'G-97QJ8QTPJ1'; // <-- your GA4 ID
+    const GA_API_SECRET = 'zUkd940YQFqIsxpFBCVEzw';  // <-- from API secrets tab
+
+    const GA_ENDPOINT = `https://www.google-analytics.com/mp/collect?measurement_id=${GA_MEASUREMENT_ID}&api_secret=${GA_API_SECRET}`;
+
+    document.getElementById('send').addEventListener('click', async () => {
+      const payload = {
+        client_id: 'test-client-id-1234567890',
+        events: [
+          {
+            name: 'page_view',
+            params: {
+              page_title: 'Test Page',
+              page_location: 'https://probextshield.ca/testpage',
+              page_path: '/testpage'
+            }
+          }
+        ]
+      };
+
+      fetch(GA_ENDPOINT, {
+        method: 'POST',
+        //headers: {
+        //  'Content-Type': 'application/json'
+        //},
+        body: JSON.stringify(payload)
+      })
+        .then(res => {
+          console.log('Status:', res.status);
+          if (!res.ok) return res.text().then(console.warn);
+          else return res.text().then(console.log);
+        })
+        .catch(err => console.error('Fetch error:', err));
+    });
+  </script>
+</body>
+</html>
