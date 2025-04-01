@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ProbExtShield",
   "author": "Stéphane Hamel",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Your watchdog against extension fingerprinting.",
   "homepage_url": "https://github.com/shamel67/probextshield",
   "minimum_chrome_version": "133",
