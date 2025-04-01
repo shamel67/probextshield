@@ -1,13 +1,22 @@
 {
-  "name": "ProbExtShield",
+  "name": "probextshield",
   "version": "0.2.1",
   "description": "Your watchdog against extension fingerprinting.",
   "main": "content.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "sync": "node scripts/sync.js",
     "build": "npm run sync && rm -rf ProbExtShield && mkdir ProbExtShield && cp -R src/* ProbExtShield && zip -r ProbExtShield-v$(node -p \"require('./package.json').version\").zip ProbExtShield && rm -rf ProbExtShield",
-    "push": "node scripts/push.js",
-    "release": "npm run sync && npm run build && npm publish"
+    "push": "git push origin main && git push origin --tags",
+    "pull": "git pull origin main",
+    "release": "npm run sync && npm run build && npm publish",
+    "release-gh": "npm run release && gh release create v$(node -p \"require('./package.json').version\") --generate-notes",
+    "gh-release": "npm run push && gh release create v$(node -p \"require('./package.json').version\") --generate-notes",
+    "refresh": "npm run pull && npm run sync && git add . && git commit -m 'sync: updated from latest' && npm run push",
+    "version-patch": "npm run sync && git add . && git commit -m 'prepare: bump patch version' && npm version patch && npm run push",
+    "version": "npm run sync && git add src/manifest.json"
   },
   "files": [
     "src/",
