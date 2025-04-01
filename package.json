@@ -9,14 +9,10 @@
   "scripts": {
     "sync": "node scripts/sync.js",
     "build": "npm run sync && rm -rf ProbExtShield && mkdir ProbExtShield && cp -R src/* ProbExtShield && zip -r ProbExtShield-v$(node -p \"require('./package.json').version\").zip ProbExtShield && rm -rf ProbExtShield",
-    "push": "git push origin main && git push origin --tags",
-    "pull": "git pull origin main",
-    "release": "npm run sync && npm run build && npm publish",
+    "release": "npm run build && npm publish",
     "release-gh": "npm run release && gh release create v$(node -p \"require('./package.json').version\") --generate-notes",
-    "gh-release": "npm run push && gh release create v$(node -p \"require('./package.json').version\") --generate-notes",
-    "refresh": "npm run pull && npm run sync && git add . && git commit -m 'sync: updated from latest' && npm run push",
-    "version-patch": "npm run sync && git add . && git commit -m 'prepare: bump patch version' && npm version patch && npm run push",
-    "version": "npm run sync && git add src/manifest.json"
+    "version": "npm run sync && git add src/manifest.json",
+    "deploy": "npm version patch && git push origin main --follow-tags"
   },
   "files": [
     "src/",
