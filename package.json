@@ -1,6 +1,6 @@
 {
   "name": "probextshield",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Your watchdog against extension fingerprinting.",
   "main": "content.js",
   "publishConfig": {
