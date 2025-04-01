@@ -1,7 +1,7 @@
 # .npmignore
+.DS_Store
+assets
 *.zip
-assets/
-utest.htm
-ai.js
-unit.js
 *.log
+src/test.htm
+src/scrape-extension-info.js

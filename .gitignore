@@ -1,6 +1,7 @@
 # Development/test files
+.DS_Store
 assets
 *.zip
-ai.js
-unit.js
-utests.htm
+*.log
+src/test.htm
+src/scrape-extension-info.js
